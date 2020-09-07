@@ -29,6 +29,7 @@
 		"del": "3.0.0",
 		"gulp": "4.0.2",
 		"gulp-concat": "2.6.1",
+		"gulp-embed-svg": "^1.2.0",
 		"gulp-flatmap": "1.0.2",
 		"gulp-header": "2.0.5",
 		"gulp-jshint": "2.1.0",
