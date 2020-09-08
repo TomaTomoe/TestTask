@@ -1,5 +1,5 @@
 /*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
-import DATA from "/js/dataArticle.mjs";
+import DATA from "./dataArticle.mjs";
 
 class CustomArticle extends HTMLElement {
   constructor(categoryColor, imgSrc, buttonUrl, date, headerText, summary) {
