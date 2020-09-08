@@ -3,7 +3,6 @@
 @import "variables";
 @import "article";
 
-
 header {
   // margin-top: -$headerHeight;
   width: 100%;
@@ -389,20 +388,11 @@ main {
   width: 20px;
 }
 
-.icon-details {
-  height: 17px;
-  width: 17px;
-  padding: 2px 0;
-  margin-right: 6px;
-  fill: $articleInfo;
-}
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
-     main {
-.masonry {
-    -moz-column-width: 35em;
-    -webkit-column-width: 35em;
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  main {
+    .masonry {
+      -moz-column-width: 35em;
+      -webkit-column-width: 35em;
+    }
   }
-     }
 }
