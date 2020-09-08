@@ -6,7 +6,7 @@
 var settings = {
 	clean: true,
 	scripts: true,
-	polyfills: true,
+	polyfills: false,
 	styles: true,
 	svgs: true,
 	copy: true,
@@ -23,7 +23,7 @@ var paths = {
 	output: 'dist/',
 	scripts: {
 		input: 'src/js/*',
-		polyfills: '.polyfill.js',
+		// polyfills: '.polyfill.js',
 		output: 'dist/js/'
 	},
 	styles: {
@@ -113,11 +113,8 @@ var cleanDist = function (done) {
 // Repeated JavaScript tasks
 var jsTasks = lazypipe()
 	.pipe(header, banner.main, {package: package})
-	.pipe(optimizejs)
 	.pipe(dest, paths.scripts.output)
 	.pipe(rename, {suffix: '.min'})
-	.pipe(uglify)
-	.pipe(optimizejs)
 	.pipe(header, banner.main, {package: package})
 	.pipe(dest, paths.scripts.output);
 
@@ -138,17 +135,17 @@ var buildScripts = function (done) {
 				var suffix = '';
 
 				// If separate polyfill files enabled
-				if (settings.polyfills) {
+				// if (settings.polyfills) {
 
-					// Update the suffix
-					suffix = '.polyfills';
+				// 	// Update the suffix
+				// 	suffix = '.polyfills';
 
-					// Grab files that aren't polyfills, concatenate them, and process them
-					src([file.path + '/*.js', '!' + file.path + '/*' + paths.scripts.polyfills])
-						.pipe(concat(file.relative + '.js'))
-						.pipe(jsTasks());
+				// 	// Grab files that aren't polyfills, concatenate them, and process them
+				// 	src([file.path + '/*.js', '!' + file.path + '/*' + paths.scripts.polyfills])
+				// 		.pipe(concat(file.relative + '.js'))
+				// 		.pipe(jsTasks());
 
-				}
+				// }
 
 				// Grab all files and concatenate them
 				// If separate polyfills enabled, this will have .polyfills in the filename

@@ -1,0 +1,49 @@
+
+$headerBg: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.01) 0%,
+      rgba(35, 36, 37, 0.01) 100%
+    ),
+    #262626;
+
+$navHoverBg: linear-gradient(
+              0deg,
+              rgba(255, 255, 255, 0.24) 0%,
+              rgba(35, 36, 37, 0.24) 100%
+            ),
+            #1e1e1e;
+$navHoverShadow: inset 0px 1px 4px rgba(0, 0, 0, 0.67);
+$navBorder: 1px solid #2d2d2d;
+
+$navIconColor: #525252;
+$navIconColorHover: #ffffff;
+
+$navDropDownColor: #323232;
+$navDropDownOuterBorder: 1px solid #484848;
+$navDropDownInnerBorder: 1px solid #e7e7e7;
+$navDropDownBg: #fbfbfb;
+$navDropDownShadow: 2px 2px 0 0 rgba(0, 0, 0, 0.18);
+
+$sideMenuBg: #fbfbfb;
+$sideMenuBorder: 1px solid #e7e7e7;
+$sideMenuIconColorHover: #ffffff;
+
+$articleButtonColor: #ffffff;
+$articleHover: rgba(231, 96, 73, 0.8);
+$articleBg: #ffffff;
+$articleBorder: #ebebeb;
+$articleH1Color: #313131;
+$articlePColor: #626262;
+$articleInfo: #9d9d9d;
+
+$category1: #14b9d6;
+$category2: #e76049;
+$category3: #2eb398;
+$category4: #90899c;
+$category5: #5692b1;
+$category6: #f9b704;
+$category7: #dd1787;
+$category8: #e76049;
+$settings: #585858;
+
+$headerHeight: 77px;

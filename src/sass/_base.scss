@@ -1,0 +1,72 @@
+/**
+ * @section Base Styles
+ */
+@import "variables";
+
+$text: #313131;
+$bg: #ffffff;
+
+* {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+html {
+	overflow: hidden;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: sans-serif;
+	overflow-x: hidden;
+}
+
+body {
+	// margin-top: $headerHeight;
+	// height: calc(100% - #{$headerHeight});
+	color: $text;
+	overflow-x: hidden;
+	background: $bg;
+	position: relative;
+
+	div {
+		position: relative;
+	}
+
+	&>div {
+		overflow-x: hidden;
+	}
+
+	&.popup {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: $text;
+	cursor: pointer !important;
+	text-decoration: none;
+	&:hover {
+		color: $text;
+		text-decoration: none;
+	}
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}

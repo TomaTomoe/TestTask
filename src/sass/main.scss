@@ -1,1 +1,408 @@
-@import "components/base"
+@import "base";
+@import "fonts";
+@import "variables";
+@import "article";
+
+
+header {
+  // margin-top: -$headerHeight;
+  width: 100%;
+  height: $headerHeight;
+  background: $headerBg;
+  background-blend-mode: overlay, normal;
+  position: fixed;
+  z-index: 2;
+  font-family: "Open_Sans";
+  font-weight: 400;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 700;
+
+    .logo {
+      padding-top: 30px;
+      padding-left: 30px;
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding: 29px 2rem 26px;
+        list-style: none;
+        color: $navIconColor;
+        border-left: $navBorder;
+        cursor: pointer;
+
+        &:hover,
+        &:focus-within {
+          color: $navIconColorHover;
+          background: $navHoverBg;
+          background-blend-mode: overlay, normal;
+          box-shadow: $navHoverShadow;
+
+          .icon-menu {
+            fill: $navIconColorHover;
+          }
+
+          .share,
+          .share:hover {
+            visibility: visible;
+            display: block;
+            opacity: 1;
+          }
+        }
+      }
+      li.menu {
+        padding: 31px 28px 28px;
+      }
+
+      .share {
+        display: none;
+        position: absolute;
+        top: 76px;
+        right: 0;
+        border: $navDropDownOuterBorder;
+        border-top: none;
+        visibility: hidden;
+        box-shadow: $navDropDownShadow;
+        opacity: 0;
+        transition: visibility 0.5s ease 1s;
+
+        &:hover {
+          visibility: visible;
+          display: block;
+          opacity: 1;
+        }
+
+        li {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-start;
+          padding: 0;
+          background: $bg;
+          border: none;
+          border-top: $navDropDownInnerBorder;
+          color: $navDropDownColor;
+          font-size: 13px;
+
+          &:first-child {
+            border-top: none;
+          }
+          &:hover,
+          &:focus-within {
+            box-shadow: none;
+            color: $navDropDownColor;
+            background: $navDropDownBg;
+          }
+
+          span {
+            padding: 18px;
+            border-left: $navDropDownInnerBorder;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ic_facebook {
+  fill: #3360b2;
+}
+.ic_twitter {
+  fill: #08b0e0;
+}
+.ic_google {
+  fill: #ef5c5c;
+}
+.ic_pinterest {
+  fill: #ae0a0a;
+}
+
+nav.categories {
+  position: fixed;
+  top: $headerHeight;
+  width: 70px;
+  height: 100%;
+  background: $sideMenuBg;
+  border-right: $sideMenuBorder;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      height: 70px;
+      border-bottom: $sideMenuBorder;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        &::after {
+          text-transform: uppercase;
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 69px;
+          vertical-align: middle;
+          position: absolute;
+          top: 0;
+          left: 60px;
+          height: 69px;
+          width: 90px;
+          padding: 0;
+        }
+      }
+
+      &.category-graphic {
+        &:hover {
+          background: $category1;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "graphic";
+
+            background: $category1;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category1;
+        }
+      }
+
+      &.category-music {
+        &:hover {
+          background: $category2;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "music";
+
+            background: $category2;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category2;
+        }
+      }
+
+      &.category-photography {
+        &:hover {
+          background: $category3;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "photo";
+
+            background: $category3;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category3;
+        }
+      }
+
+      &.category-cinema {
+        &:hover {
+          background: $category4;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "cinema";
+
+            background: $category4;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category4;
+        }
+      }
+
+      &.category-business {
+        &:hover {
+          background: $category5;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "business";
+
+            background: $category5;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category5;
+        }
+      }
+
+      &.category-travel {
+        &:hover {
+          background: $category6;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "travel";
+
+            background: $category6;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category6;
+        }
+      }
+
+      &.category-fashion {
+        &:hover {
+          background: $category7;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "fashion";
+
+            background: $category7;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category7;
+        }
+      }
+
+      &.category-more {
+        &:hover {
+          background: $category8;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: "more";
+
+            background: $category8;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $category8;
+        }
+      }
+
+      &.settings {
+        &:hover {
+          background: $settings;
+          color: $sideMenuIconColorHover;
+          &::after {
+            content: none;
+          }
+          svg {
+            fill: $sideMenuIconColorHover;
+          }
+        }
+        svg {
+          fill: $settings;
+        }
+      }
+
+      &:last-child {
+        position: fixed;
+        bottom: 0;
+        width: 69px;
+        height: 70px;
+        border-top: $sideMenuBorder;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.settings {
+  .icon {
+    fill: $settings;
+  }
+}
+
+main {
+  position: relative;
+  margin-left: 70px;
+  top: $headerHeight;
+
+  .masonry {
+    padding: 2em;
+    -moz-column-width: 25em;
+    -webkit-column-width: 25em;
+    -moz-column-gap: 2em;
+    -webkit-column-gap: 2em;
+  }
+}
+
+.icon {
+  display: inline;
+}
+
+.icon-menu {
+  display: block;
+  height: 22px;
+  width: 22px;
+  fill: $navIconColor;
+}
+
+.icon-menu-dropdown {
+  height: 20px;
+  width: 20px;
+  margin: 16px;
+}
+
+.icon-category {
+  height: 18px;
+  width: 20px;
+}
+
+.icon-details {
+  height: 17px;
+  width: 17px;
+  padding: 2px 0;
+  margin-right: 6px;
+  fill: $articleInfo;
+}
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+     main {
+.masonry {
+    -moz-column-width: 35em;
+    -webkit-column-width: 35em;
+  }
+     }
+}
