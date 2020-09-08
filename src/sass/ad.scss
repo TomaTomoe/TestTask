@@ -1,0 +1,27 @@
+@import "base";
+@import "fonts";
+@import "variables";
+
+.masonry-brick {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 2em;
+  width: 100%;
+  border-bottom: none;
+  background: $articleBg;
+  box-shadow: none;
+
+  .ad-img {
+    padding: 1rem;
+    border: 1px solid $articleBorder;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+}

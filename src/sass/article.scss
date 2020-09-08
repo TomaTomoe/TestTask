@@ -1,0 +1,122 @@
+@import "base";
+@import "fonts";
+@import "variables";
+   
+.masonry-brick {
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 2em;
+  width: 100%;
+  border-bottom: none;
+  background: $articleBg;
+  box-shadow: 0 5px #2eb398;
+
+  .triangle-up {
+    position: absolute;
+    bottom: -1px;
+    left: 3rem;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid $articleBg;
+  }
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .article-img {
+    position: relative;
+  }
+  .article-img:hover {
+    .onHover {
+      opacity: 1;
+    }
+  }
+
+  .onHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $articleHover;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+
+    button {
+      background: transparent;
+      color: $articleButtonColor;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      font-size: 24px;
+      font-weight: 700;
+      border: 5px solid $articleButtonColor;
+      cursor: pointer;
+      padding: 0;
+
+      .icon-button {
+        width: 20px;
+        height: 20px;
+        fill: $articleButtonColor;
+        margin: 0 24px;
+      }
+
+      span {
+        padding: 18px 24px;
+        display: inline-block;
+        border-left: 5px solid $articleButtonColor;
+      }
+    }
+  }
+
+  .summary {
+    border: none;
+    border-left: 1px solid $articleBorder;
+    border-right: 1px solid $articleBorder;
+
+    div.info {
+      padding: 2rem 2rem 0;
+      font-family: "Open_Sans";
+      font-weight: 600;
+      font-size: 12px;
+      color: $articleInfo;
+      cursor: default;
+
+      .date,
+      .comments {
+        vertical-align: top;
+        margin-right: 22px;
+
+        time {
+          vertical-align: top;
+        }
+      }
+    }
+
+    h1 {
+      margin: 0;
+      padding: 1rem 2rem;
+      font-family: "Open_Sans";
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 30px;
+      color: $articleH1Color;
+    }
+
+    p {
+      margin: 0;
+      padding: 0 2rem 2rem 2rem;
+      font-family: "Open_Sans";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $articlePColor;
+    }
+  }
+}
