@@ -1,10 +1,11 @@
-@import "components/base";
+@import "base";
 @import "fonts";
 @import "variables";
+@import "article";
 
 
 header {
-  margin-top: -$headerHeight;
+  // margin-top: -$headerHeight;
   width: 100%;
   height: $headerHeight;
   background: $headerBg;
@@ -26,6 +27,7 @@ header {
     .logo {
       padding-top: 30px;
       padding-left: 30px;
+      cursor: pointer;
     }
 
     ul {
@@ -39,10 +41,11 @@ header {
 
       li {
         position: relative;
-        padding: 29px 28px 26px;
+        padding: 29px 2rem 26px;
         list-style: none;
         color: $navIconColor;
         border-left: $navBorder;
+        cursor: pointer;
 
         &:hover,
         &:focus-within {
@@ -153,6 +156,7 @@ nav.categories {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
 
       &:hover {
         &::after {
@@ -352,6 +356,7 @@ nav.categories {
 main {
   position: relative;
   margin-left: 70px;
+  top: $headerHeight;
 
   .masonry {
     padding: 2em;
@@ -359,119 +364,6 @@ main {
     -webkit-column-width: 25em;
     -moz-column-gap: 2em;
     -webkit-column-gap: 2em;
-
-    .masonry-brick {
-      overflow: hidden;
-      display: inline-block;
-      margin-bottom: 2em;
-      width: 100%;
-      border-bottom: none;
-      background: $articleBg;
-      box-shadow: 0 5px #2eb398;
-
-      .triangle-up {
-        position: absolute;
-        bottom: 0;
-        left: 3rem;
-        width: 0;
-        height: 0;
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-bottom: 15px solid $articleBg;
-      }
-
-      img {
-        width: 100%;
-        vertical-align: top;
-      }
-
-      .article-img:hover {
-        .onHover {
-          opacity: 1;
-        }
-      }
-
-      .onHover {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: $articleHover;
-        opacity: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        button {
-          background: transparent;
-          color: $articleButtonColor;
-          text-transform: uppercase;
-          font-family: "Montserrat";
-          font-size: 24px;
-          font-weight: 700;
-          border: 5px solid $articleButtonColor;
-          cursor: pointer;
-          padding: 0;
-
-          .icon-button {
-            width: 20px;
-            height: 20px;
-            fill: $articleButtonColor;
-            margin: 0 24px;
-          }
-
-          span {
-            padding: 18px 24px;
-            display: inline-block;
-            border-left: 5px solid $articleButtonColor;
-          }
-        }
-      }
-
-      .summary {
-        border-left: 1px solid $articleBorder;
-        border-right: 1px solid $articleBorder;
-
-        div.info {
-          padding: 2rem 2rem 0;
-          font-family: "Open_Sans";
-          font-weight: 600;
-          font-size: 12px;
-          color: $articleInfo;
-
-          .date,
-          .comments {
-            vertical-align: top;
-            margin-right: 22px;
-
-            time {
-              vertical-align: top;
-            }
-          }
-        }
-
-        h1 {
-          margin: 0;
-          padding: 1rem 2rem;
-          font-family: "Open_Sans";
-          font-weight: 700;
-          font-size: 26px;
-          line-height: 30px;
-          color: $articleH1Color;
-        }
-
-        p {
-          margin: 0;
-          padding: 0 2rem 2rem 2rem;
-          font-family: "Open_Sans";
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 22px;
-          color: $articlePColor;
-        }
-      }
-    }
   }
 }
 
@@ -503,4 +395,14 @@ main {
   padding: 2px 0;
   margin-right: 6px;
   fill: $articleInfo;
+}
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+     main {
+.masonry {
+    -moz-column-width: 35em;
+    -webkit-column-width: 35em;
+  }
+     }
 }

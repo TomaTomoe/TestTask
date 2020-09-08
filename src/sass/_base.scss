@@ -1,10 +1,10 @@
 /**
  * @section Base Styles
  */
+@import "variables";
 
 $text: #313131;
 $bg: #ffffff;
-$headerBg: #222222;
 
 * {
 	box-sizing: border-box;
@@ -34,8 +34,8 @@ body {
 }
 
 body {
-	margin-top: 77px;
-	height: calc(100% - 77px);
+	// margin-top: $headerHeight;
+	// height: calc(100% - #{$headerHeight});
 	color: $text;
 	overflow-x: hidden;
 	background: $bg;
