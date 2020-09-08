@@ -1,0 +1,87 @@
+/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+/*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
+const DATA = [
+  { 
+    type: 'article',
+    categoryColor: "#2eb398",
+    imgSrc: "Layer 1.png",
+    buttonUrl: "#",
+    date: "27 July 2013",
+    headerText: "All sail being set, he now cast loose the life-line, reserved.",
+    summary: "Soon all the boats but Starbuck's were dropped; all the boat-sails set all the paddles plying; with rippling swiftness, shooting to leeward; and Ahab heading the onset.A pale, death- glimmer lit up Fedallah's sunken eyes; a hideous motion.",
+  },
+  {
+    type: 'ad',
+    imgAd: "Advertisement.png",
+    urlAd: "#",
+  },
+  {
+    type: 'article',
+    categoryColor: "#e76049",
+    imgSrc: "Layer 3.png",
+    buttonUrl: "#",
+    date: "25 July 2013",
+    headerText: "Robin Thicke: Longest Hot 100 Reign This Year",
+    summary: "The line originally used in the fishery was of the best hemp, slightly vapoured with tar, not impregnated with it, as in the case of ordinary ropes; for while tar, as ordinarily used, makes the hemp more pliable to the rope- maker, Of late years the Manilla rope has in the American fishery almost entirely superseded hemp as.",
+  },
+  {
+    type: 'article',
+    categoryColor: "#90899c",
+    imgSrc: "Layer 9.png",
+    buttonUrl: "#",
+    date: "25 July 2013",
+    headerText: "A Strange Brand of Happy",
+    summary: "An aimless bachelor loses his job and finds himself chasing the same girl(his new life coach) that his manipulative ex- boss is after as well.The boys are spurred on by a rag tag group of retirees inneed of some action.",
+  },
+  {
+    type: 'article',
+    categoryColor: "#5692b1",
+    imgSrc: "Layer 7.png",
+    buttonUrl: "#",
+    date: "27 July 2013",
+    headerText: "A-Rod, A Fraud, And A Waste Of Yankees Money, Public's Time",
+    summary: "Enough already.  I can’t take it no more.  Free us from enslavement to all this banter.OK, so my fit of anger this morning is not steroid-induced…though that would be fitting in light of recent discussions.Baseball talk of late has centered upon performance enhancing drugs.Biogenesis has become the new BALCO.A - Rod the newBarry Bonds.And all I hear from various media types are questions like.",
+  },
+  {
+    type: 'article',
+    categoryColor: "#14b9d6",
+    imgSrc: "Layer 13.png",
+    buttonUrl: "#",
+    date: "27 July 2013",
+    headerText: "The whale-line is only two-thirds of an inch in thickness",
+    summary: "At first sight, you would not think it so strong as it really is. By experiment its one and fifty yarns will each suspend a weight of one hundred and twenty pounds; so that the whole rope will bear a strain nearly equal to three tons. ",
+  }, {
+    type: 'ad',
+    imgAd: "Advertisement.png",
+    urlAd: "#",
+  },
+  {
+    type: 'article',
+    categoryColor: "#e76049",
+    imgSrc: "Layer 3.png",
+    buttonUrl: "#",
+    date: "25 July 2013",
+    headerText: "Robin Thicke: Longest Hot 100 Reign This Year",
+    summary: "The line originally used in the fishery was of the best hemp, slightly vapoured with tar, not impregnated with it, as in the case of ordinary ropes; for while tar, as ordinarily used, makes the hemp more pliable to the rope- maker, Of late years the Manilla rope has in the American fishery almost entirely superseded hemp as.",
+  },
+  {
+    type: 'article',
+    categoryColor: "#90899c",
+    imgSrc: "Layer 9.png",
+    buttonUrl: "#",
+    date: "25 July 2013",
+    headerText: "A Strange Brand of Happy",
+    summary: "An aimless bachelor loses his job and finds himself chasing the same girl(his new life coach) that his manipulative ex- boss is after as well.The boys are spurred on by a rag tag group of retirees inneed of some action.",
+  },
+  {
+    type: 'article',
+    categoryColor: "#5692b1",
+    imgSrc: "Layer 7.png",
+    buttonUrl: "#",
+    date: "27 July 2013",
+    headerText: "A-Rod, A Fraud, And A Waste Of Yankees Money, Public's Time",
+    summary: "Enough already.  I can’t take it no more.  Free us from enslavement to all this banter.OK, so my fit of anger this morning is not steroid-induced…though that would be fitting in light of recent discussions.Baseball talk of late has centered upon performance enhancing drugs.Biogenesis has become the new BALCO.A - Rod the newBarry Bonds.And all I hear from various media types are questions like.",
+  },
+];
+
+export default DATA;
