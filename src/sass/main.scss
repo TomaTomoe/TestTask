@@ -1,16 +1,13 @@
 @import "components/base";
 @import "fonts";
+@import "variables";
+
 
 header {
-  margin-top: -77px;
+  margin-top: -$headerHeight;
   width: 100%;
-  height: 77px;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.01) 0%,
-      rgba(35, 36, 37, 0.01) 100%
-    ),
-    #262626;
+  height: $headerHeight;
+  background: $headerBg;
   background-blend-mode: overlay, normal;
   position: fixed;
   z-index: 2;
@@ -44,23 +41,18 @@ header {
         position: relative;
         padding: 29px 28px 26px;
         list-style: none;
-        color: #525252;
-        border-left: 1px solid #2d2d2d;
+        color: $navIconColor;
+        border-left: $navBorder;
 
         &:hover,
         &:focus-within {
-          color: #ffffff;
-          background: linear-gradient(
-              0deg,
-              rgba(255, 255, 255, 0.24) 0%,
-              rgba(35, 36, 37, 0.24) 100%
-            ),
-            #1e1e1e;
+          color: $navIconColorHover;
+          background: $navHoverBg;
           background-blend-mode: overlay, normal;
-          box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.67);
+          box-shadow: $navHoverShadow;
 
           .icon-menu {
-            fill: #ffffff;
+            fill: $navIconColorHover;
           }
 
           .share,
@@ -80,10 +72,10 @@ header {
         position: absolute;
         top: 76px;
         right: 0;
-        border: 1px solid #484848;
+        border: $navDropDownOuterBorder;
         border-top: none;
         visibility: hidden;
-        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.18);
+        box-shadow: $navDropDownShadow;
         opacity: 0;
         transition: visibility 0.5s ease 1s;
 
@@ -101,8 +93,8 @@ header {
           padding: 0;
           background: $bg;
           border: none;
-          border-top: 1px solid #e7e7e7;
-          color: #323232;
+          border-top: $navDropDownInnerBorder;
+          color: $navDropDownColor;
           font-size: 13px;
 
           &:first-child {
@@ -111,13 +103,13 @@ header {
           &:hover,
           &:focus-within {
             box-shadow: none;
-            color: #323232;
-            background: #fbfbfb;
+            color: $navDropDownColor;
+            background: $navDropDownBg;
           }
 
           span {
             padding: 18px;
-            border-left: 1px solid #e7e7e7;
+            border-left: $navDropDownInnerBorder;
           }
         }
       }
@@ -140,11 +132,11 @@ header {
 
 nav.categories {
   position: fixed;
-  top: 77px;
+  top: $headerHeight;
   width: 70px;
   height: 100%;
-  background: #fbfbfb;
-  border-right: 1px solid #e7e7e7;
+  background: $sideMenuBg;
+  border-right: $sideMenuBorder;
   z-index: 1;
 
   ul {
@@ -155,7 +147,7 @@ nav.categories {
 
     li {
       height: 70px;
-      border-bottom: 1px solid #e7e7e7;
+      border-bottom: $sideMenuBorder;
       position: relative;
       display: flex;
       flex-direction: row;
@@ -181,161 +173,161 @@ nav.categories {
 
       &.category-graphic {
         &:hover {
-          background: #14b9d6;
-          color: #ffffff;
+          background: $category1;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "graphic";
 
-            background: #14b9d6;
+            background: $category1;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #14b9d6;
+          fill: $category1;
         }
       }
 
       &.category-music {
         &:hover {
-          background: #e76049;
-          color: #ffffff;
+          background: $category2;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "music";
 
-            background: #e76049;
+            background: $category2;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #e76049;
+          fill: $category2;
         }
       }
 
       &.category-photography {
         &:hover {
-          background: #2eb398;
-          color: #ffffff;
+          background: $category3;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "photo";
 
-            background: #2eb398;
+            background: $category3;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #2eb398;
+          fill: $category3;
         }
       }
 
       &.category-cinema {
         &:hover {
-          background: #90899c;
-          color: #ffffff;
+          background: $category4;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "cinema";
 
-            background: #90899c;
+            background: $category4;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #90899c;
+          fill: $category4;
         }
       }
 
       &.category-business {
         &:hover {
-          background: #5692b1;
-          color: #ffffff;
+          background: $category5;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "business";
 
-            background: #5692b1;
+            background: $category5;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #5692b1;
+          fill: $category5;
         }
       }
 
       &.category-travel {
         &:hover {
-          background: #f9b704;
-          color: #ffffff;
+          background: $category6;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "travel";
 
-            background: #f9b704;
+            background: $category6;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #f9b704;
+          fill: $category6;
         }
       }
 
       &.category-fashion {
         &:hover {
-          background: #dd1787;
-          color: #ffffff;
+          background: $category7;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "fashion";
 
-            background: #dd1787;
+            background: $category7;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #dd1787;
+          fill: $category7;
         }
       }
 
       &.category-more {
         &:hover {
-          background: #e76049;
-          color: #ffffff;
+          background: $category8;
+          color: $sideMenuIconColorHover;
           &::after {
             content: "more";
 
-            background: #e76049;
+            background: $category8;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #e76049;
+          fill: $category8;
         }
       }
 
       &.settings {
         &:hover {
-          background: #585858;
-          color: #ffffff;
+          background: $settings;
+          color: $sideMenuIconColorHover;
           &::after {
             content: none;
           }
           svg {
-            fill: #ffffff;
+            fill: $sideMenuIconColorHover;
           }
         }
         svg {
-          fill: #585858;
+          fill: $settings;
         }
       }
 
@@ -344,7 +336,8 @@ nav.categories {
         bottom: 0;
         width: 69px;
         height: 70px;
-        border-top: 1px solid #e7e7e7;
+        border-top: $sideMenuBorder;
+        border-bottom: none;
       }
     }
   }
@@ -352,7 +345,7 @@ nav.categories {
 
 .settings {
   .icon {
-    fill: #585858;
+    fill: $settings;
   }
 }
 
@@ -373,6 +366,7 @@ main {
       margin-bottom: 2em;
       width: 100%;
       border-bottom: none;
+      background: $articleBg;
       box-shadow: 0 5px #2eb398;
 
       .triangle-up {
@@ -383,7 +377,7 @@ main {
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-bottom: 15px solid #ffffff;
+        border-bottom: 15px solid $articleBg;
       }
 
       img {
@@ -403,7 +397,7 @@ main {
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(231, 96, 73, 0.8);
+        background-color: $articleHover;
         opacity: 0;
         display: flex;
         align-items: center;
@@ -411,40 +405,40 @@ main {
 
         button {
           background: transparent;
-          color: #ffffff;
+          color: $articleButtonColor;
           text-transform: uppercase;
           font-family: "Montserrat";
           font-size: 24px;
           font-weight: 700;
-          border: 5px solid #ffffff;
+          border: 5px solid $articleButtonColor;
           cursor: pointer;
           padding: 0;
 
           .icon-button {
             width: 20px;
             height: 20px;
-            fill: #ffffff;
+            fill: $articleButtonColor;
             margin: 0 24px;
           }
 
           span {
             padding: 18px 24px;
             display: inline-block;
-            border-left: 5px solid #ffffff;
+            border-left: 5px solid $articleButtonColor;
           }
         }
       }
 
       .summary {
-        border-left: 1px solid #ebebeb;
-        border-right: 1px solid #ebebeb;
+        border-left: 1px solid $articleBorder;
+        border-right: 1px solid $articleBorder;
 
         div.info {
           padding: 2rem 2rem 0;
           font-family: "Open_Sans";
           font-weight: 600;
           font-size: 12px;
-          color: #9d9d9d;
+          color: $articleInfo;
 
           .date,
           .comments {
@@ -464,7 +458,7 @@ main {
           font-weight: 700;
           font-size: 26px;
           line-height: 30px;
-          color: #313131;
+          color: $articleH1Color;
         }
 
         p {
@@ -474,7 +468,7 @@ main {
           font-weight: 400;
           font-size: 14px;
           line-height: 22px;
-          color: #626262;
+          color: $articlePColor;
         }
       }
     }
@@ -489,7 +483,7 @@ main {
   display: block;
   height: 22px;
   width: 22px;
-  fill: #525252;
+  fill: $navIconColor;
 }
 
 .icon-menu-dropdown {
@@ -508,5 +502,5 @@ main {
   width: 17px;
   padding: 2px 0;
   margin-right: 6px;
-  fill: #9d9d9d;
+  fill: $articleInfo;
 }
