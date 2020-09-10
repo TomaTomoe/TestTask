@@ -96,7 +96,7 @@
         fill: $articleInfo;
       }
 
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1000px), (min-resolution: 192dpi) and (max-width: 1000px) {
         font-size: 2rem;
 
         .icon-details {
@@ -136,7 +136,7 @@
       color: $articlePColor;
     }
 
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 992px), (min-resolution: 192dpi) and (max-width: 992px) {
       h1 {
         font-size: 4rem;
         line-height: 5rem;
