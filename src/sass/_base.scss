@@ -4,7 +4,7 @@
 @import "variables";
 
 $text: #313131;
-$bg: #ffffff;
+
 
 * {
 	box-sizing: border-box;
@@ -55,11 +55,11 @@ body {
 }
 
 a {
-	color: $text;
+	color: $navIconColor;
 	cursor: pointer !important;
 	text-decoration: none;
 	&:hover {
-		color: $text;
+		color: $navIconColorHover;
 		text-decoration: none;
 	}
 }
