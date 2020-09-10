@@ -19,7 +19,8 @@ class CustomArticle extends HTMLElement {
       @import url("./css/main.css");
       @import url("./css/article.css");
       </style>
-      <article class="masonry-brick" style="box-shadow: 0 5px ${this.categoryColor}">
+      <article class="masonry-brick" style="box-shadow: 0 5px ${this.categoryColor}"> 
+        <a href="${this.buttonUrl}" >
           <div class="article-img">
             <img src="${this.imgSrc}" alt="Article image" />
             <div class="onHover">
@@ -54,7 +55,8 @@ class CustomArticle extends HTMLElement {
               ${this.summary}
             </p>
           </div>
-        </article>
+        </a>
+      </article>
     `;
   }
 }
