@@ -21,7 +21,7 @@ class CustomArticle extends HTMLElement {
       </style>
       <article class="masonry-brick" style="box-shadow: 0 5px ${this.categoryColor}">
           <div class="article-img">
-            <img src="${this.imgSrc}" />
+            <img src="${this.imgSrc}" alt="Article image" />
             <div class="onHover">
               <button onclick="location.href='${this.buttonUrl}'" type="button">
                 <svg class="icon icon-button">
@@ -76,7 +76,7 @@ class CustomAd extends HTMLElement {
       </style>
       <article class="masonry-brick">
         <div class="ad-img">
-          <a href="${this.urlAd}"><img src="${this.imgAd}" /></a>
+          <a href="${this.urlAd}"><img src="${this.imgAd}" alt="Advertisement image" /></a>
         </div>
       </article>
     `;
