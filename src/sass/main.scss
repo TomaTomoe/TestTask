@@ -141,13 +141,14 @@ nav.categories {
   border-right: $sideMenuBorder;
   z-index: 1;
 
-  ul {
-    list-style: none;
+  div {
     margin: 0;
     padding: 0;
     height: 100%;
 
-    li {
+    a {
+      display: block;
+      text-decoration: none;
       height: 70px;
       border-bottom: $sideMenuBorder;
       position: relative;
