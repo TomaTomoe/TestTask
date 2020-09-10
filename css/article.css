@@ -59,14 +59,14 @@ body.popup {
 
 /* line 57, src/sass/_base.scss */
 a {
-  color: #313131;
+  color: #525252;
   cursor: pointer !important;
   text-decoration: none;
 }
 
 /* line 61, src/sass/_base.scss */
 a:hover {
-  color: #313131;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -266,10 +266,9 @@ button {
   font-weight: 600;
   font-size: 12px;
   color: #9d9d9d;
-  cursor: default;
 }
 
-/* line 91, src/sass/article.scss */
+/* line 90, src/sass/article.scss */
 .masonry-brick .summary div.info .icon-details {
   height: 17px;
   width: 17px;
@@ -278,32 +277,32 @@ button {
   fill: #9d9d9d;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1000px), (min-resolution: 192dpi) and (max-width: 1000px) {
   /* line 83, src/sass/article.scss */
   .masonry-brick .summary div.info {
     font-size: 2rem;
   }
-  /* line 102, src/sass/article.scss */
+  /* line 101, src/sass/article.scss */
   .masonry-brick .summary div.info .icon-details {
     height: 3rem;
     width: 3rem;
   }
 }
 
-/* line 108, src/sass/article.scss */
+/* line 107, src/sass/article.scss */
 .masonry-brick .summary div.info .date,
 .masonry-brick .summary div.info .comments {
   vertical-align: top;
   margin-right: 22px;
 }
 
-/* line 113, src/sass/article.scss */
+/* line 112, src/sass/article.scss */
 .masonry-brick .summary div.info .date time,
 .masonry-brick .summary div.info .comments time {
   vertical-align: top;
 }
 
-/* line 119, src/sass/article.scss */
+/* line 118, src/sass/article.scss */
 .masonry-brick .summary h1 {
   margin: 0;
   padding: 1rem 2rem;
@@ -314,7 +313,7 @@ button {
   color: #313131;
 }
 
-/* line 129, src/sass/article.scss */
+/* line 128, src/sass/article.scss */
 .masonry-brick .summary p {
   margin: 0;
   padding: 0 2rem 2rem 2rem;
@@ -325,13 +324,13 @@ button {
   color: #626262;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 140, src/sass/article.scss */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 992px), (min-resolution: 192dpi) and (max-width: 992px) {
+  /* line 139, src/sass/article.scss */
   .masonry-brick .summary h1 {
     font-size: 4rem;
     line-height: 5rem;
   }
-  /* line 144, src/sass/article.scss */
+  /* line 143, src/sass/article.scss */
   .masonry-brick .summary p {
     font-size: 2.5rem;
     line-height: 3.5rem;

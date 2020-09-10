@@ -59,14 +59,14 @@ body.popup {
 
 /* line 57, src/sass/_base.scss */
 a {
-  color: #313131;
+  color: #525252;
   cursor: pointer !important;
   text-decoration: none;
 }
 
 /* line 61, src/sass/_base.scss */
 a:hover {
-  color: #313131;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -222,14 +222,14 @@ body.popup {
 
 /* line 57, src/sass/_base.scss */
 a {
-  color: #313131;
+  color: #525252;
   cursor: pointer !important;
   text-decoration: none;
 }
 
 /* line 61, src/sass/_base.scss */
 a:hover {
-  color: #313131;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -429,10 +429,9 @@ button {
   font-weight: 600;
   font-size: 12px;
   color: #9d9d9d;
-  cursor: default;
 }
 
-/* line 91, src/sass/article.scss */
+/* line 90, src/sass/article.scss */
 .masonry-brick .summary div.info .icon-details {
   height: 17px;
   width: 17px;
@@ -441,32 +440,32 @@ button {
   fill: #9d9d9d;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 1000px), (min-resolution: 192dpi) and (max-width: 1000px) {
   /* line 83, src/sass/article.scss */
   .masonry-brick .summary div.info {
     font-size: 2rem;
   }
-  /* line 102, src/sass/article.scss */
+  /* line 101, src/sass/article.scss */
   .masonry-brick .summary div.info .icon-details {
     height: 3rem;
     width: 3rem;
   }
 }
 
-/* line 108, src/sass/article.scss */
+/* line 107, src/sass/article.scss */
 .masonry-brick .summary div.info .date,
 .masonry-brick .summary div.info .comments {
   vertical-align: top;
   margin-right: 22px;
 }
 
-/* line 113, src/sass/article.scss */
+/* line 112, src/sass/article.scss */
 .masonry-brick .summary div.info .date time,
 .masonry-brick .summary div.info .comments time {
   vertical-align: top;
 }
 
-/* line 119, src/sass/article.scss */
+/* line 118, src/sass/article.scss */
 .masonry-brick .summary h1 {
   margin: 0;
   padding: 1rem 2rem;
@@ -477,7 +476,7 @@ button {
   color: #313131;
 }
 
-/* line 129, src/sass/article.scss */
+/* line 128, src/sass/article.scss */
 .masonry-brick .summary p {
   margin: 0;
   padding: 0 2rem 2rem 2rem;
@@ -488,13 +487,13 @@ button {
   color: #626262;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 140, src/sass/article.scss */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 992px), (min-resolution: 192dpi) and (max-width: 992px) {
+  /* line 139, src/sass/article.scss */
   .masonry-brick .summary h1 {
     font-size: 4rem;
     line-height: 5rem;
   }
-  /* line 144, src/sass/article.scss */
+  /* line 143, src/sass/article.scss */
   .masonry-brick .summary p {
     font-size: 2.5rem;
     line-height: 3.5rem;
@@ -564,14 +563,19 @@ header nav ul {
 /* line 41, src/sass/main.scss */
 header nav ul li {
   position: relative;
-  padding: 29px 2rem 26px;
   list-style: none;
   color: #525252;
   border-left: 1px solid #2d2d2d;
   cursor: pointer;
 }
 
-/* line 49, src/sass/main.scss */
+/* line 48, src/sass/main.scss */
+header nav ul li a {
+  display: block;
+  padding: 29px 2rem 26px;
+}
+
+/* line 53, src/sass/main.scss */
 header nav ul li:hover, header nav ul li:focus-within {
   color: #ffffff;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.24)), to(rgba(35, 36, 37, 0.24))), #1e1e1e;
@@ -581,12 +585,12 @@ header nav ul li:hover, header nav ul li:focus-within {
           box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.67);
 }
 
-/* line 56, src/sass/main.scss */
+/* line 60, src/sass/main.scss */
 header nav ul li:hover .icon-menu, header nav ul li:focus-within .icon-menu {
   fill: #ffffff;
 }
 
-/* line 60, src/sass/main.scss */
+/* line 64, src/sass/main.scss */
 header nav ul li:hover .share,
 header nav ul li:hover .share:hover, header nav ul li:focus-within .share,
 header nav ul li:focus-within .share:hover {
@@ -595,12 +599,17 @@ header nav ul li:focus-within .share:hover {
   opacity: 1;
 }
 
-/* line 68, src/sass/main.scss */
-header nav ul li.menu {
+/* line 73, src/sass/main.scss */
+header nav ul li.menu a {
   padding: 31px 28px 28px;
 }
 
-/* line 72, src/sass/main.scss */
+/* line 78, src/sass/main.scss */
+header nav ul li.menu .share a {
+  padding: 0;
+}
+
+/* line 84, src/sass/main.scss */
 header nav ul .share {
   display: none;
   position: absolute;
@@ -616,15 +625,15 @@ header nav ul .share {
   transition: visibility 0.5s ease 1s;
 }
 
-/* line 84, src/sass/main.scss */
+/* line 96, src/sass/main.scss */
 header nav ul .share:hover {
   visibility: visible;
   display: block;
   opacity: 1;
 }
 
-/* line 90, src/sass/main.scss */
-header nav ul .share li {
+/* line 102, src/sass/main.scss */
+header nav ul .share a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,46 +655,41 @@ header nav ul .share li {
   font-size: 13px;
 }
 
-/* line 102, src/sass/main.scss */
-header nav ul .share li:first-child {
-  border-top: none;
-}
-
-/* line 105, src/sass/main.scss */
-header nav ul .share li:hover, header nav ul .share li:focus-within {
+/* line 114, src/sass/main.scss */
+header nav ul .share a:hover, header nav ul .share a:focus-within {
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #323232;
   background: #fbfbfb;
 }
 
-/* line 112, src/sass/main.scss */
-header nav ul .share li span {
+/* line 121, src/sass/main.scss */
+header nav ul .share a span {
   padding: 18px;
   border-left: 1px solid #e7e7e7;
 }
 
-/* line 122, src/sass/main.scss */
+/* line 131, src/sass/main.scss */
 .ic_facebook {
   fill: #3360b2;
 }
 
-/* line 125, src/sass/main.scss */
+/* line 134, src/sass/main.scss */
 .ic_twitter {
   fill: #08b0e0;
 }
 
-/* line 128, src/sass/main.scss */
+/* line 137, src/sass/main.scss */
 .ic_google {
   fill: #ef5c5c;
 }
 
-/* line 131, src/sass/main.scss */
+/* line 140, src/sass/main.scss */
 .ic_pinterest {
   fill: #ae0a0a;
 }
 
-/* line 135, src/sass/main.scss */
+/* line 144, src/sass/main.scss */
 nav.categories {
   position: fixed;
   top: 77px;
@@ -696,16 +700,17 @@ nav.categories {
   z-index: 1;
 }
 
-/* line 144, src/sass/main.scss */
-nav.categories ul {
-  list-style: none;
+/* line 153, src/sass/main.scss */
+nav.categories div {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* line 150, src/sass/main.scss */
-nav.categories ul li {
+/* line 158, src/sass/main.scss */
+nav.categories div a {
+  display: block;
+  text-decoration: none;
   height: 70px;
   border-bottom: 1px solid #e7e7e7;
   position: relative;
@@ -725,8 +730,8 @@ nav.categories ul li {
   cursor: pointer;
 }
 
-/* line 161, src/sass/main.scss */
-nav.categories ul li:hover::after {
+/* line 171, src/sass/main.scss */
+nav.categories div a:hover::after {
   text-transform: uppercase;
   font-family: "Montserrat";
   font-weight: 700;
@@ -741,205 +746,205 @@ nav.categories ul li:hover::after {
   padding: 0;
 }
 
-/* line 178, src/sass/main.scss */
-nav.categories ul li.category-graphic:hover {
+/* line 188, src/sass/main.scss */
+nav.categories div a.category-graphic:hover {
   background: #14b9d6;
   color: #ffffff;
 }
 
-/* line 181, src/sass/main.scss */
-nav.categories ul li.category-graphic:hover::after {
+/* line 191, src/sass/main.scss */
+nav.categories div a.category-graphic:hover::after {
   content: "graphic";
   background: #14b9d6;
 }
 
-/* line 186, src/sass/main.scss */
-nav.categories ul li.category-graphic:hover svg {
+/* line 196, src/sass/main.scss */
+nav.categories div a.category-graphic:hover svg {
   fill: #ffffff;
 }
 
-/* line 190, src/sass/main.scss */
-nav.categories ul li.category-graphic svg {
+/* line 200, src/sass/main.scss */
+nav.categories div a.category-graphic svg {
   fill: #14b9d6;
 }
 
-/* line 196, src/sass/main.scss */
-nav.categories ul li.category-music:hover {
+/* line 206, src/sass/main.scss */
+nav.categories div a.category-music:hover {
   background: #e76049;
   color: #ffffff;
 }
 
-/* line 199, src/sass/main.scss */
-nav.categories ul li.category-music:hover::after {
+/* line 209, src/sass/main.scss */
+nav.categories div a.category-music:hover::after {
   content: "music";
   background: #e76049;
 }
 
-/* line 204, src/sass/main.scss */
-nav.categories ul li.category-music:hover svg {
+/* line 214, src/sass/main.scss */
+nav.categories div a.category-music:hover svg {
   fill: #ffffff;
 }
 
-/* line 208, src/sass/main.scss */
-nav.categories ul li.category-music svg {
+/* line 218, src/sass/main.scss */
+nav.categories div a.category-music svg {
   fill: #e76049;
 }
 
-/* line 214, src/sass/main.scss */
-nav.categories ul li.category-photography:hover {
+/* line 224, src/sass/main.scss */
+nav.categories div a.category-photography:hover {
   background: #2eb398;
   color: #ffffff;
 }
 
-/* line 217, src/sass/main.scss */
-nav.categories ul li.category-photography:hover::after {
+/* line 227, src/sass/main.scss */
+nav.categories div a.category-photography:hover::after {
   content: "photo";
   background: #2eb398;
 }
 
-/* line 222, src/sass/main.scss */
-nav.categories ul li.category-photography:hover svg {
+/* line 232, src/sass/main.scss */
+nav.categories div a.category-photography:hover svg {
   fill: #ffffff;
 }
 
-/* line 226, src/sass/main.scss */
-nav.categories ul li.category-photography svg {
+/* line 236, src/sass/main.scss */
+nav.categories div a.category-photography svg {
   fill: #2eb398;
 }
 
-/* line 232, src/sass/main.scss */
-nav.categories ul li.category-cinema:hover {
+/* line 242, src/sass/main.scss */
+nav.categories div a.category-cinema:hover {
   background: #90899c;
   color: #ffffff;
 }
 
-/* line 235, src/sass/main.scss */
-nav.categories ul li.category-cinema:hover::after {
+/* line 245, src/sass/main.scss */
+nav.categories div a.category-cinema:hover::after {
   content: "cinema";
   background: #90899c;
 }
 
-/* line 240, src/sass/main.scss */
-nav.categories ul li.category-cinema:hover svg {
+/* line 250, src/sass/main.scss */
+nav.categories div a.category-cinema:hover svg {
   fill: #ffffff;
 }
 
-/* line 244, src/sass/main.scss */
-nav.categories ul li.category-cinema svg {
+/* line 254, src/sass/main.scss */
+nav.categories div a.category-cinema svg {
   fill: #90899c;
 }
 
-/* line 250, src/sass/main.scss */
-nav.categories ul li.category-business:hover {
+/* line 260, src/sass/main.scss */
+nav.categories div a.category-business:hover {
   background: #5692b1;
   color: #ffffff;
 }
 
-/* line 253, src/sass/main.scss */
-nav.categories ul li.category-business:hover::after {
+/* line 263, src/sass/main.scss */
+nav.categories div a.category-business:hover::after {
   content: "business";
   background: #5692b1;
 }
 
-/* line 258, src/sass/main.scss */
-nav.categories ul li.category-business:hover svg {
+/* line 268, src/sass/main.scss */
+nav.categories div a.category-business:hover svg {
   fill: #ffffff;
 }
 
-/* line 262, src/sass/main.scss */
-nav.categories ul li.category-business svg {
+/* line 272, src/sass/main.scss */
+nav.categories div a.category-business svg {
   fill: #5692b1;
 }
 
-/* line 268, src/sass/main.scss */
-nav.categories ul li.category-travel:hover {
+/* line 278, src/sass/main.scss */
+nav.categories div a.category-travel:hover {
   background: #f9b704;
   color: #ffffff;
 }
 
-/* line 271, src/sass/main.scss */
-nav.categories ul li.category-travel:hover::after {
+/* line 281, src/sass/main.scss */
+nav.categories div a.category-travel:hover::after {
   content: "travel";
   background: #f9b704;
 }
 
-/* line 276, src/sass/main.scss */
-nav.categories ul li.category-travel:hover svg {
+/* line 286, src/sass/main.scss */
+nav.categories div a.category-travel:hover svg {
   fill: #ffffff;
 }
 
-/* line 280, src/sass/main.scss */
-nav.categories ul li.category-travel svg {
+/* line 290, src/sass/main.scss */
+nav.categories div a.category-travel svg {
   fill: #f9b704;
 }
 
-/* line 286, src/sass/main.scss */
-nav.categories ul li.category-fashion:hover {
+/* line 296, src/sass/main.scss */
+nav.categories div a.category-fashion:hover {
   background: #dd1787;
   color: #ffffff;
 }
 
-/* line 289, src/sass/main.scss */
-nav.categories ul li.category-fashion:hover::after {
+/* line 299, src/sass/main.scss */
+nav.categories div a.category-fashion:hover::after {
   content: "fashion";
   background: #dd1787;
 }
 
-/* line 294, src/sass/main.scss */
-nav.categories ul li.category-fashion:hover svg {
+/* line 304, src/sass/main.scss */
+nav.categories div a.category-fashion:hover svg {
   fill: #ffffff;
 }
 
-/* line 298, src/sass/main.scss */
-nav.categories ul li.category-fashion svg {
+/* line 308, src/sass/main.scss */
+nav.categories div a.category-fashion svg {
   fill: #dd1787;
 }
 
-/* line 304, src/sass/main.scss */
-nav.categories ul li.category-more:hover {
+/* line 314, src/sass/main.scss */
+nav.categories div a.category-more:hover {
   background: #e76049;
   color: #ffffff;
 }
 
-/* line 307, src/sass/main.scss */
-nav.categories ul li.category-more:hover::after {
+/* line 317, src/sass/main.scss */
+nav.categories div a.category-more:hover::after {
   content: "more";
   background: #e76049;
 }
 
-/* line 312, src/sass/main.scss */
-nav.categories ul li.category-more:hover svg {
+/* line 322, src/sass/main.scss */
+nav.categories div a.category-more:hover svg {
   fill: #ffffff;
 }
 
-/* line 316, src/sass/main.scss */
-nav.categories ul li.category-more svg {
+/* line 326, src/sass/main.scss */
+nav.categories div a.category-more svg {
   fill: #e76049;
 }
 
-/* line 322, src/sass/main.scss */
-nav.categories ul li.settings:hover {
+/* line 332, src/sass/main.scss */
+nav.categories div a.settings:hover {
   background: #585858;
   color: #ffffff;
 }
 
-/* line 325, src/sass/main.scss */
-nav.categories ul li.settings:hover::after {
+/* line 335, src/sass/main.scss */
+nav.categories div a.settings:hover::after {
   content: none;
 }
 
-/* line 328, src/sass/main.scss */
-nav.categories ul li.settings:hover svg {
+/* line 338, src/sass/main.scss */
+nav.categories div a.settings:hover svg {
   fill: #ffffff;
 }
 
-/* line 332, src/sass/main.scss */
-nav.categories ul li.settings svg {
+/* line 342, src/sass/main.scss */
+nav.categories div a.settings svg {
   fill: #585858;
 }
 
-/* line 337, src/sass/main.scss */
-nav.categories ul li:last-child {
+/* line 347, src/sass/main.scss */
+nav.categories div a:last-child {
   position: fixed;
   bottom: 0;
   width: 69px;
@@ -948,19 +953,19 @@ nav.categories ul li:last-child {
   border-bottom: none;
 }
 
-/* line 350, src/sass/main.scss */
+/* line 360, src/sass/main.scss */
 .settings .icon {
   fill: #585858;
 }
 
-/* line 355, src/sass/main.scss */
+/* line 365, src/sass/main.scss */
 main {
   position: relative;
   margin-left: 70px;
   top: 77px;
 }
 
-/* line 360, src/sass/main.scss */
+/* line 370, src/sass/main.scss */
 main .masonry {
   padding: 2em;
   -moz-column-width: 25em;
@@ -969,12 +974,12 @@ main .masonry {
   -webkit-column-gap: 2em;
 }
 
-/* line 369, src/sass/main.scss */
+/* line 379, src/sass/main.scss */
 .icon {
   display: inline;
 }
 
-/* line 373, src/sass/main.scss */
+/* line 383, src/sass/main.scss */
 .icon-menu {
   display: block;
   height: 22px;
@@ -982,21 +987,21 @@ main .masonry {
   fill: #525252;
 }
 
-/* line 380, src/sass/main.scss */
+/* line 390, src/sass/main.scss */
 .icon-menu-dropdown {
   height: 20px;
   width: 20px;
   margin: 16px;
 }
 
-/* line 386, src/sass/main.scss */
+/* line 396, src/sass/main.scss */
 .icon-category {
   height: 18px;
   width: 20px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  /* line 393, src/sass/main.scss */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 992px), (min-resolution: 192dpi) and (max-width: 992px) {
+  /* line 404, src/sass/main.scss */
   main .masonry {
     -moz-column-width: 35em;
     -webkit-column-width: 35em;

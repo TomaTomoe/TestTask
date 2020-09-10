@@ -59,14 +59,14 @@ body.popup {
 
 /* line 57, src/sass/_base.scss */
 a {
-  color: #313131;
+  color: #525252;
   cursor: pointer !important;
   text-decoration: none;
 }
 
 /* line 61, src/sass/_base.scss */
 a:hover {
-  color: #313131;
+  color: #ffffff;
   text-decoration: none;
 }
 

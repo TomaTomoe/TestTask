@@ -1,6 +1,6 @@
 /*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
 /*! project-name v0.0.1 | (c) 2020 YOUR NAME | MIT License | http://link-to-your-git-repo.com */
-import DATA from "/js/dataArticle.mjs";
+import DATA from "./dataArticle.mjs";
 
 class CustomArticle extends HTMLElement {
   constructor(categoryColor, imgSrc, buttonUrl, date, headerText, summary) {
@@ -21,9 +21,10 @@ class CustomArticle extends HTMLElement {
       @import url("./css/main.css");
       @import url("./css/article.css");
       </style>
-      <article class="masonry-brick" style="box-shadow: 0 5px ${this.categoryColor}">
+      <article class="masonry-brick" style="box-shadow: 0 5px ${this.categoryColor}"> 
+        <a href="${this.buttonUrl}" >
           <div class="article-img">
-            <img src="${this.imgSrc}" />
+            <img src="${this.imgSrc}" alt="Article image" />
             <div class="onHover">
               <button onclick="location.href='${this.buttonUrl}'" type="button">
                 <svg class="icon icon-button">
@@ -56,7 +57,8 @@ class CustomArticle extends HTMLElement {
               ${this.summary}
             </p>
           </div>
-        </article>
+        </a>
+      </article>
     `;
   }
 }
@@ -78,7 +80,7 @@ class CustomAd extends HTMLElement {
       </style>
       <article class="masonry-brick">
         <div class="ad-img">
-          <a href="${this.urlAd}"><img src="${this.imgAd}" /></a>
+          <a href="${this.urlAd}"><img src="${this.imgAd}" alt="Advertisement image" /></a>
         </div>
       </article>
     `;
